@@ -1,7 +1,7 @@
 #header {
     height: 50px;
-    background: #edfbe9;
-    color: #fff;
+    background: #7db14e;;
+    color: #070f05;
 }
 
 #branding h1{
@@ -10,16 +10,16 @@
 
 a:link,
 a:visited {
-    color: #edfbe9;
+    color: #000000;
 }
 
 div.breadcrumbs {
-    background: #30caa0;
-    color: #444;
+    background: #106823;
+    color: #ffffff;
 }
 /* 59C22A */
 div.breadcrumbs a{
-    color: #111;
+    color: #000000;
 }
 
 .module h2, .module caption, .inline-group h2 {
@@ -27,6 +27,6 @@ div.breadcrumbs a{
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background-color: #edfbe9;
+    background-color: #243f1c;
     color: #fff;
 }

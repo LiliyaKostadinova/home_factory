@@ -1,12 +1,19 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import ListingForm
+from .models import Listing
 
 def listings(request):
-    return render(request, 'listings/listings.html')
+    listings = Listing.objects.all().filter(is_published=True)
+    context = {'listings': listings}
+    return render(request, 'listings/listings.html', context)
 
-def listing(request):
-    return render(request, 'listings/listing.html')
+def listing(request, listing_id):
+    listing = get_object_or_404(Listing, pk=listing_id)
+    context = {
+        'listing': listing
+    }
+    return render(request, 'listings/listing.html', context)
 
 @login_required
 def create_listing(request):

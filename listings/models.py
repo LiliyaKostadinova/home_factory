@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+
 from django.contrib.auth import get_user_model
 
 # Listing model 
@@ -7,8 +8,8 @@ class Listing(models.Model):
     '''Model class to describe the Listing object and its attributes.'''
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     TYPE_CHOICES = [
-        ('for_rent', 'For Rent'),
-        ('for_sale', 'For Sale'),
+        ('for rent', 'For Rent'),
+        ('for sale', 'For Sale'),
     ]
     is_published = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)
