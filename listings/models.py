@@ -21,7 +21,7 @@ class Listing(models.Model):
     lot_size = models.FloatField(max_length=100)
     story = models.IntegerField()
     number_of_rooms = models.IntegerField()
-    bathrooms = models.DecimalField(max_digits=2, decimal_places=1, blank=True)
+    bathrooms = models.DecimalField(max_digits=2, decimal_places=1, blank=True, null=True)
     building_year = models.IntegerField(blank=True, null=True)
     description = models.TextField(blank=True)
     required_commission = models.FloatField(max_length=100, default=0, blank=True)
