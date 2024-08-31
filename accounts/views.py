@@ -38,6 +38,4 @@ def register_view(request):
 
 @login_required
 def dashboard_view(request):
-    # user_listings = Listing.objects.filter(owner=request.user)
-    # context = {'listings': user_listings}
     return redirect('index')
